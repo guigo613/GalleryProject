@@ -1,0 +1,17 @@
+.app {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.center-app {
+    margin: auto;
+}
+
+.table-container {
+    max-height: 75vh;
+    overflow: auto;
+}
