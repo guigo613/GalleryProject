@@ -7,6 +7,8 @@ class Gallery {
     public array $inner = array();
 
     public function __construct(UserModel $user) {
+        if (!file_exists("bd"))
+            mkdir("bd", 0777);
 
         $sql = new SQLite3($this->filename);
 

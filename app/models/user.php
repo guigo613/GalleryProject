@@ -28,6 +28,9 @@ class Users {
     private string $filename = "bd/sql.db";
 
     public function __construct() {
+        if (!file_exists("bd"))
+            mkdir("bd", 0777);
+        
         $sql = new SQLite3($this->filename);
 
         $sql->exec("CREATE TABLE IF NOT EXISTS Users (user varchar(12), pass varchar(64), privilege int default 0);");
